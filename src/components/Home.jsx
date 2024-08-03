@@ -78,7 +78,7 @@ function Home() {
       </div>
       <div
         id="cursor"
-        className="h-8 w-8 rounded-full bg-[#E89A19] fixed blur-[2px] z-50 -translate-x-1/2 -translate-y-1/2 hidden"
+        className="h-8 w-8 rounded-full bg-[#E89A19] fixed blur-[2px] z-40 -translate-x-1/2 -translate-y-1/2 hidden"
       ></div>
       <div
         id="cursor-blur"

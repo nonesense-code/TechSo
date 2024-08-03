@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./components/Home.jsx";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import Bod from "./components/Bod.jsx";
 function App() {
   return (
     <Router>
@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="*" element={<Home />} />
         <Route path="/" element={<Home />} />
+        <Route path="/bod" element={<Bod />} />
       </Routes>
     </Router>
   );
