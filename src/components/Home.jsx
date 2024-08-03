@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
   useEffect(() => {
-    // window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     gsap.to("#navbar", {
       backgroundColor: "#000",
       height: "72px",
@@ -38,9 +38,11 @@ function Home() {
       "mousemove",
       (e) => {
         const cursor = document.getElementById("cursor");
+        cursor.style.display = "block";
         cursor.style.left = e.x + "px";
         cursor.style.top = e.y + "px";
         const cursor_blur = document.getElementById("cursor-blur");
+        cursor_blur.style.display = "block";
         cursor_blur.style.left = e.x + "px";
         cursor_blur.style.top = e.y + "px";
       },
@@ -65,7 +67,7 @@ function Home() {
                 color: "#95C11E",
                 duration: 2,
               }}
-              className="text-2xl uppercase"
+              className="text-2xl uppercase font-bolder"
             >
               <Link to={`${item.toLowerCase().split(" ").join("")}`}>
                 {item}
@@ -76,11 +78,11 @@ function Home() {
       </div>
       <div
         id="cursor"
-        className="h-8 w-8 rounded-full bg-[#E89A19] fixed z-50 -translate-x-1/2 -translate-y-1/2"
+        className="h-8 w-8 rounded-full bg-[#E89A19] fixed blur-[2px] z-50 -translate-x-1/2 -translate-y-1/2 hidden"
       ></div>
       <div
         id="cursor-blur"
-        className="h-52 w-52 rounded-full bg-[#E89A19] fixed blur-[50px] -translate-x-1/2 -translate-y-1/2"
+        className="h-52 w-52 rounded-full bg-[#E89A19] fixed blur-[50px] -translate-x-1/2 -translate-y-1/2 hidden"
       ></div>
       <div className="bg-[url('https://images.unsplash.com/photo-1639327380081-bf86fc57a7a5?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] object-center fixed -z-10 inset-0 object-cover"></div>
       <div className="pt-52" id="main">
@@ -205,22 +207,22 @@ function Home() {
             />
           </div>
         </div>
-        <div className="flex pt-20 justify-evenly px-10 py-4 gap-6">
-          <div className="h-[500px] w-full">
+        <div className="flex pt-20 justify-evenly px-10 py-4">
+          <div className="h-[500px] w-[25%]">
             <img
               src="https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
               className="h-full w-full object-cover rounded-xl"
             />
           </div>
-          <div className="h-[500px] w-full">
+          <div className="h-[500px] w-[25%]">
             <img
               src="https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
               className="h-full w-full object-cover rounded-xl"
             />
           </div>
-          <div className="h-[500px] w-full">
+          <div className="h-[500px] w-[25%]">
             <img
               src="https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
