@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+.heading::after {
+  content: "Sustainable. Solutions.";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  left: -4px;
+  color: rgba(32, 178, 171, 0.788);
+  -webkit-text-stroke: 1px #95c11e;
+  z-index: -1;
+}
+
+.para1 {
+  font-family: "Segoe UI", "Montserrat";
+  font-weight: 600;
+}
